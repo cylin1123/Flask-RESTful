@@ -1,1 +1,1 @@
-# Flask-RestfulAPI
+# Flask-RESTful
