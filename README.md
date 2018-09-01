@@ -19,6 +19,9 @@ app.run(port=10000, debug=True)
 ~~~~
 
 # 建立Route
+
+app.route 就是 Flask 的 routing decorator，而第一個需要輸入的參數是 endpoint 的路徑，如果需要從 API 傳入參數到路徑，就需要使用 <> 符號，例如 @app.route(‘/store/<string:name>’),在 decorator 後面就是 API 的方法，它定義了 API 被觸發後的動作，最終給予結果
+
 * POST /store data: {name:}
 ~~~
 @app.route('/store' , methods=['POST'])
