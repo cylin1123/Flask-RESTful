@@ -10,7 +10,7 @@
 pip install flask
 ~~~
 
-# Initial  Flask Web Server
+# 初始化 Flask Web Server
 app.py
 ~~~
 from flask import Flask
@@ -18,3 +18,24 @@ app = Flask(__name__)
 app.run(port=10000, debug=True)
 ~~~~
 
+# 建立Route
+* POST /store data: {name:}
+~~~
+@app.route('/store' , methods=['POST'])
+~~~
+* GET /store/<string:name>
+~~~
+@app.route('/store/<string:name>')
+~~~
+* GET /store
+~~~
+@app.route('/store')
+~~~
+* POST /store<string:name>/item
+~~~
+@app.route('/store/<string:name>/item' , methods=['POST'])
+~~~
+* GET /store/<string:name>/item
+~~~
+@app.route('/store/<string:name>/item')
+~~~
